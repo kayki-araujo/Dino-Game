@@ -1,29 +1,56 @@
 #game {
+    position: relative;
     width: 600px;
     height: 200px;
     border: 1px solid gray;
     margin: auto;
     overflow: hidden;
+    background-color: #f7f7f7;
 }
 
 #dino {
-    width: 54px;
+    width: 42px;
     height: 50px;
-    background-image: url(../img/dino.png);
-    background-size: 54px 50px;
-    position: relative;
+    background-size: 42px 50px;
+    position: absolute;
     top: 150px;
     left: 50px;
 }
 
-#cactus {
-    width: 31px;
+.cactus {
+    width: 24px;
     height: 50px;
-    background-image: url(../img/cactus.png);
-    background-size: 31px 50px;
-    position: relative;
-    top: 100px;
+    background-size: 24px 50px;
+    position: absolute;
+    top: 150px;
     left: 600px;
+}
+
+.alive {
+    background-image: url(../img/dino-standart.png);
+}
+
+.dead {
+    background-image: url(../img/dino-dead.png);
+}
+
+.cactus-1 {
+    background-image: url(../img/cactus-1.png);
+}
+
+.cactus-2 {
+    background-image: url(../img/cactus-2.png);
+}
+
+.cactus-3 {
+    background-image: url(../img/cactus-3.png);
+}
+
+.dinoRun {
+    animation-name: dinoRun;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .smallJump {
@@ -44,9 +71,17 @@
 
 .move {
     animation-name: move;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-duration: 1s;
     animation-timing-function: linear;
+}
+
+@keyframes dinoRun {
+    from {
+        background-image: url(../img/dino-run-l.png);
+    }
+    to {
+        background-image: url(../img/dino-run-r.png);
+    }
 }
 
 @keyframes smallJump {
