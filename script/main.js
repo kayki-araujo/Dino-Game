@@ -11,7 +11,7 @@ const placeCactus = () => {
     if (isGameOver) {
         return;
     }
-    const cactusType = parseInt(Math.random() * (3 - 1) + 1);
+    const cactusType = parseInt(Math.random() * (4 - 1) + 1);
     const cactusId = crypto.randomUUID();
     const cactus = document.createElement("div");
     cactus.classList.add("cactus", "move", "cactus-" + cactusType);
