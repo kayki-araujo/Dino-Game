@@ -135,5 +135,3 @@ setInterval(() => {
         placeCactus();
     }
 }, SPAWN_INTERVAL);
-
-setInterval(() => {}, 100);
