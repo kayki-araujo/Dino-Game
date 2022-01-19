@@ -1,0 +1,79 @@
+#game {
+    width: 600px;
+    height: 200px;
+    border: 1px solid gray;
+    margin: auto;
+    overflow: hidden;
+}
+
+#dino {
+    width: 54px;
+    height: 50px;
+    background-image: url(../img/dino.png);
+    background-size: 54px 50px;
+    position: relative;
+    top: 150px;
+    left: 50px;
+}
+
+#cactus {
+    width: 31px;
+    height: 50px;
+    background-image: url("../img/cactus.png");
+    background-size: 31px 50px;
+    position: relative;
+    top: 100px;
+    left: 600px;
+}
+
+.smallJump {
+    animation-name: smallJump;
+    animation-duration: 0.2s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-out;
+}
+
+.bigJump {
+    animation-name: bigJump;
+    animation-duration: 0.25s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-out;
+}
+
+.move {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes smallJump {
+    from {
+        top: 150px;
+    }
+
+    to {
+        top: 66.66px;
+    }
+}
+
+@keyframes bigJump {
+    from {
+        top: 150px;
+    }
+
+    to {
+        top: 25px;
+    }
+}
+
+@keyframes move {
+    from {
+        left: 600px;
+    }
+    to {
+        left: -31px;
+    }
+}
